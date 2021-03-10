@@ -1,0 +1,6 @@
+.grid {
+  display: grid;
+  grid-template-columns: auto min-content;
+  justify-content: center;
+  justify-items: end;
+}
