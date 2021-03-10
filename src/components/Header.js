@@ -1,6 +1,6 @@
 // Dependencies
 import React from 'react';
-import logo from '../images/logo/logo.png';
+import logo from '../images/logo/logo-gray.jpg';
 
 // Styles
 import '../styles/Header.css';
