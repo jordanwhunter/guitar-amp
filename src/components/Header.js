@@ -1,13 +1,17 @@
 // Dependencies
 import React from 'react';
+import logo from '../images/logo/logo.png';
 
 // Styles
 import '../styles/Header.css';
 
 export default function Header() {
   return (
-    <div>
-      Hello world. I am the Header component.
+    <div className='header'>
+      <img 
+        src={logo} 
+        alt='logo'
+      />
     </div>
   )
 };
