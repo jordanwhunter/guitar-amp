@@ -8,6 +8,28 @@
 
 .header>img {
   object-fit: contain;
+  align-items: center;
   width: 500px;
   max-height: 200px;
+}
+
+@media screen and (max-width: 560px) {
+  .header>img {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header>img {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header>img {
+    max-width: 200px;
+    width: 100%;
+  }
 }
