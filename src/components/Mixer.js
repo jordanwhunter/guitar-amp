@@ -2,12 +2,13 @@
 import React from 'react';
 
 // Styles
+import '../styles/Mixer.css';
 
 export default function Mixer() {
   return (
     <div className='mixer'>
       <div className='grid'>
-        <label for='volume'>Volume</label>
+        <label htmlFor='volume'>Volume</label>
         <input 
           type='range'
           id='volume'
@@ -17,7 +18,7 @@ export default function Mixer() {
           step='.01'
         /> 
 
-        <label for='treble'>Treble</label>
+        <label htmlFor='treble'>Treble</label>
         <input 
           type='range' 
           id='treble'
@@ -26,7 +27,7 @@ export default function Mixer() {
           defaultValue='0'
         /> 
         
-        <label for='mid'>Mid</label>
+        <label htmlFor='mid'>Mid</label>
         <input 
           type='range' 
           id='mid'
@@ -35,7 +36,7 @@ export default function Mixer() {
           defaultValue='0'
         /> 
 
-        <label for='bass'>Bass</label>
+        <label htmlFor='bass'>Bass</label>
         <input 
           type='range' 
           id='bass'
