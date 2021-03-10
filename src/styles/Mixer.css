@@ -1,6 +1,16 @@
+.mixer {
+  padding: 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: auto min-content;
   justify-content: center;
   justify-items: end;
+  align-items: center;
+  gap: 5px 10px;
+}
+
+.grid>input {
+  margin: 0;
 }
