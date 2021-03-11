@@ -6,12 +6,19 @@ const visualizer = document.getElementById('visualizer');
   
 const context = new AudioContext();
 const analyserNode = new AnalyserNode(context, { fftSize: 128 });
-const gainNode = new GainNode(context, { gain: volume.value })
+const gainNode = new GainNode(context, { gain: volume.value });
 const trebleEQ = new BiquadFilterNode(context, {
   type: 'highshelf',
   frequency: 3000,
   gain: treble.value
-})
+});
+const midEQ = new BiquadFilterNode(context, {
+  type: 'peaking',
+  Q: Math.SQRT1_2,
+  frequency: 1500,
+  gain: mid.value
+});
+
 
 const getGuitar = () => {
   return navigator.mediaDevices.getUserMedia({
@@ -25,14 +32,16 @@ const getGuitar = () => {
 };
 
 const setupContext = async () => {
-  const guitar = await getGuitar()
+  const guitar = await getGuitar();
 
   if (context.state === 'suspended') {
     await context.resume()
-  }
+  };
 
   const source = context.createMediaStreamSource(guitar)
   source
+    .connect(trebleEQ)
+    .connect(midEQ)
     .connect(gainNode)
     .connect(analyserNode)
     .connect(context.destination)
@@ -86,6 +95,11 @@ const setupEventListeners = () => {
   treble.addEventListener('input', e => {
     const value = parseInt(e.target.value)
     trebleEQ.gain.setTargetAtTime(value, context.currentTime, .01)
+  });
+
+  mid.addEventListener('input', e => {
+    const value = parseInt(e.target.value)
+    midEQ.gain.setTargetAtTime(value, context.currentTime, .01)
   });
 }
 
