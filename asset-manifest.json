@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/guitar-amp-emulator/static/css/main.e6cdc01e.chunk.css",
-    "main.js": "/guitar-amp-emulator/static/js/main.f97b6c53.chunk.js",
-    "main.js.map": "/guitar-amp-emulator/static/js/main.f97b6c53.chunk.js.map",
-    "runtime-main.js": "/guitar-amp-emulator/static/js/runtime-main.d6e382c3.js",
-    "runtime-main.js.map": "/guitar-amp-emulator/static/js/runtime-main.d6e382c3.js.map",
-    "static/js/2.f67aa103.chunk.js": "/guitar-amp-emulator/static/js/2.f67aa103.chunk.js",
-    "static/js/2.f67aa103.chunk.js.map": "/guitar-amp-emulator/static/js/2.f67aa103.chunk.js.map",
-    "index.html": "/guitar-amp-emulator/index.html",
-    "static/css/main.e6cdc01e.chunk.css.map": "/guitar-amp-emulator/static/css/main.e6cdc01e.chunk.css.map",
-    "static/js/2.f67aa103.chunk.js.LICENSE.txt": "/guitar-amp-emulator/static/js/2.f67aa103.chunk.js.LICENSE.txt",
-    "static/media/logo-gray.5b1f77a2.jpg": "/guitar-amp-emulator/static/media/logo-gray.5b1f77a2.jpg"
+    "main.css": "/guitar-amp/static/css/main.e6cdc01e.chunk.css",
+    "main.js": "/guitar-amp/static/js/main.f97b6c53.chunk.js",
+    "main.js.map": "/guitar-amp/static/js/main.f97b6c53.chunk.js.map",
+    "runtime-main.js": "/guitar-amp/static/js/runtime-main.0028d5db.js",
+    "runtime-main.js.map": "/guitar-amp/static/js/runtime-main.0028d5db.js.map",
+    "static/js/2.f67aa103.chunk.js": "/guitar-amp/static/js/2.f67aa103.chunk.js",
+    "static/js/2.f67aa103.chunk.js.map": "/guitar-amp/static/js/2.f67aa103.chunk.js.map",
+    "index.html": "/guitar-amp/index.html",
+    "static/css/main.e6cdc01e.chunk.css.map": "/guitar-amp/static/css/main.e6cdc01e.chunk.css.map",
+    "static/js/2.f67aa103.chunk.js.LICENSE.txt": "/guitar-amp/static/js/2.f67aa103.chunk.js.LICENSE.txt",
+    "static/media/logo-gray.5b1f77a2.jpg": "/guitar-amp/static/media/logo-gray.5b1f77a2.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d6e382c3.js",
+    "static/js/runtime-main.0028d5db.js",
     "static/js/2.f67aa103.chunk.js",
     "static/css/main.e6cdc01e.chunk.css",
     "static/js/main.f97b6c53.chunk.js"
