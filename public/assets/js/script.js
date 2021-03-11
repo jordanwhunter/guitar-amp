@@ -13,10 +13,17 @@ const trebleEQ = new BiquadFilterNode(context, {
   gain: treble.value
 });
 const midEQ = new BiquadFilterNode(context, {
+  // peak to freq. 1500 and gradually increase or decrease change
   type: 'peaking',
+  // determines how far mid ranges span out - square root of 0.5 increments as not to clash with treble or bass
   Q: Math.SQRT1_2,
   frequency: 1500,
   gain: mid.value
+});
+const bassEQ = new BiquadFilterNode(context, {
+  type: 'lowshelf',
+  frequency: 500,
+  gain: bass.value
 });
 
 
@@ -42,6 +49,7 @@ const setupContext = async () => {
   source
     .connect(trebleEQ)
     .connect(midEQ)
+    .connect(bassEQ)
     .connect(gainNode)
     .connect(analyserNode)
     .connect(context.destination)
@@ -100,6 +108,11 @@ const setupEventListeners = () => {
   mid.addEventListener('input', e => {
     const value = parseInt(e.target.value)
     midEQ.gain.setTargetAtTime(value, context.currentTime, .01)
+  });
+
+  bass.addEventListener('input', e => {
+    const value = parseInt(e.target.value)
+    bassEQ.gain.setTargetAtTime(value, context.currentTime, .01)
   });
 }
 
