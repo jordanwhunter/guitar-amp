@@ -7,6 +7,11 @@ const visualizer = document.getElementById('visualizer');
 const context = new AudioContext();
 const analyserNode = new AnalyserNode(context, { fftSize: 128 });
 const gainNode = new GainNode(context, { gain: volume.value })
+const trebleEQ = new BiquadFilterNode(context, {
+  type: 'highshelf',
+  frequency: 3000,
+  gain: treble.value
+})
 
 const getGuitar = () => {
   return navigator.mediaDevices.getUserMedia({
@@ -78,7 +83,10 @@ const setupEventListeners = () => {
     gainNode.gain.setTargetAtTime(value, context.currentTime, .01)
   });
 
-  
+  treble.addEventListener('input', e => {
+    const value = parseInt(e.target.value)
+    trebleEQ.gain.setTargetAtTime(value, context.currentTime, .01)
+  });
 }
 
 setupEventListeners();
